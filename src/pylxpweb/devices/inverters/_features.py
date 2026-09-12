@@ -21,6 +21,7 @@ from pylxpweb.constants import (
     DEVICE_TYPE_CODE_GRIDBOSS,
     DEVICE_TYPE_CODE_LXP_EU,
     DEVICE_TYPE_CODE_LXP_LB,
+    DEVICE_TYPE_CODE_LXP_LB_EU,
     DEVICE_TYPE_CODE_PV_SERIES,
     DEVICE_TYPE_CODE_SNA,
     DEVICE_TYPE_CODE_SNA_6000XP,
@@ -151,6 +152,7 @@ DEVICE_TYPE_CODE_TO_FAMILY: dict[int, InverterFamily] = {
     # Luxpower Series (LXP-EU, LXP-LB-BR, LXP-LV - all use same register maps)
     DEVICE_TYPE_CODE_LXP_EU: InverterFamily.LXP,  # LXP-EU 12K
     DEVICE_TYPE_CODE_LXP_LB: InverterFamily.LXP,  # LXP-LB Series (US, Brazil)
+    DEVICE_TYPE_CODE_LXP_LB_EU: InverterFamily.LXP,  # GEN2-LB-EU 3.6K (GH eg4_web_monitor#612)
     # Add more mappings as devices are discovered
     # Note: GridBOSS (DEVICE_TYPE_CODE_GRIDBOSS=50) uses API deviceType=9 and is
     # handled separately as a MID (Main Interconnect Device) controller
